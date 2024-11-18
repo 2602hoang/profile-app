@@ -26,16 +26,16 @@ const Home = () => {
               <path
                 d="M6.89 9c.98.49 1.82 1.23 2.43 2.15.35.52.35 1.19 0 1.71-.61.91-1.45 1.65-2.43 2.14M13 15h4"
                 stroke="#FF8A65"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></path>
               <path
                 d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7Z"
                 stroke="#FF8A65"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></path>
             </svg>
           </div>
@@ -61,10 +61,10 @@ const Home = () => {
                   height="24px"
                   width="24px"
                 >
-                  <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                  <g strokeWidth="0" id="SVGRepo_bgCarrier"></g>
                   <g
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
                     id="SVGRepo_tracerCarrier"
                   ></g>
                   <g id="SVGRepo_iconCarrier">
@@ -72,9 +72,9 @@ const Home = () => {
                     <g id="Interface / Download">
                       {" "}
                       <path
-                        stroke-linejoin="round"
-                        stroke-linecap="round"
-                        stroke-width="2"
+                        strokeLinejoin="round"
+                        strokeLinecap="round"
+                        strokeWidth="2"
                         stroke="#f1f1f1"
                         d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12"
                         id="Vector"

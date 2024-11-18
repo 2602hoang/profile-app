@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Image from "next/image";
 import clsx from "clsx";
 import { headerData } from "./data";
 
@@ -17,12 +17,10 @@ const Header: React.FC<Prop> = ({ sectionName }) => {
               href="/"
             >
               <span className="sr-only">Home</span>
-              <Image
+              <img
                 src="/me1.png"
                 alt="Profile picture"
-                className=" object-cover rounded-full "
-                width={60}
-                height={60}
+                className="size-16 object-cover rounded-full "
               />
             </a>
           </div>
