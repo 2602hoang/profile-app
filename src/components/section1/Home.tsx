@@ -39,7 +39,7 @@ const Home = () => {
               ></path>
             </svg>
           </div>
-          <div className="text-sm py-2 font-mono">
+          <div className="text-sm py-2 font-mono ">
             <div className=" font-bold max-w-2xl ">
               <br />
               <div className="flex items-center justify-center gap-2"></div>
@@ -91,7 +91,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="macbook hover:motion-preset-pulse top-[50%] left-[50%] md:block hidden motion-translate-x-in-[0%] motion-translate-y-in-[200%]">
+      <div className="macbook hover:cursor-zoom-in hover:motion-preset-pulse top-[50%] left-[50%] md:block hidden motion-translate-x-in-[0%] motion-translate-y-in-[200%]">
         <div className="inner ">
           <div className="screen shadow-yellow-200 shadow-2xl">
             <div className="face-one">

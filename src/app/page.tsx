@@ -10,7 +10,7 @@ import { useLogic } from "./useLogic";
 import Footter from "@/components/footter/Footter";
 
 export default function App() {
-  const { sectionName } = useLogic();
+  const { sectionName, scrollToTop } = useLogic();
   return (
     <div className="min-h-screen w-full font-mono bg-[#1E1E1E]">
       <div className="fixed bg-[#121212] top-0 left-0 right-0 shadow-2xl z-50 ">
@@ -33,6 +33,9 @@ export default function App() {
           <Contact />
         </div>
       </div>
+      <button id="backToTop" className="back-to-top" onClick={scrollToTop}>
+        ↑
+      </button>
       <Footter />
     </div>
   );
