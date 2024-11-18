@@ -12,39 +12,24 @@ import Footter from "@/components/footter/Footter";
 export default function App() {
   const { sectionName } = useLogic();
   return (
-    <div className="min-h-screen w-full font-mono">
+    <div className="min-h-screen w-full font-mono bg-[#1E1E1E]">
       <div className="fixed bg-[#121212] top-0 left-0 right-0 shadow-2xl z-50 ">
         <Header sectionName={sectionName} />
       </div>
-      <div className="bg-[#1E1E1E]">
-        <div
-          id="home"
-          className=" min-h-screen  pt-24 pb-3 px-4 md:h-screen overflow-hidden"
-        >
+      <div className=" text-white  max-w-screen-xl mx-auto px-4 pt-24">
+        <div id="home" className=" min-h-screen   pb-3  md:h-screen ">
           <Home />
         </div>
-        <div
-          id="about"
-          className="flex justify-center items-center  md:h-screen min-h-screen"
-        >
+        <div id="about" className="md:h-screen min-h-screen   ">
           <About />
         </div>
-        <div
-          id="skill"
-          className="flex justify-center items-center min-h-screen  h-screen"
-        >
+        <div id="skill" className="md:h-screen min-h-screen">
           <Skill />
         </div>
-        <div
-          id="project"
-          className="flex justify-center items-center min-h-screen  h-screen"
-        >
+        <div id="project" className="md:h-screen min-h-screen">
           <Project />
         </div>
-        <div
-          id="contact"
-          className="flex  justify-center items-center min-h-screen  h-screen"
-        >
+        <div id="contact" className="md:h-screen min-h-screen">
           <Contact />
         </div>
       </div>
