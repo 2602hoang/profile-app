@@ -18,7 +18,7 @@ const Footter = () => {
             {/* <h1 className="pb-5 font-black uppercase text-center">About Me</h1> */}
             <div className="flex justify-center text-teal-600 lg:justify-start motion-preset-flomoji-👀  pt-6 ">
               <img
-                src="/AVATA2.JPG"
+                src="/AVATA2.jpg"
                 alt="Profile picture"
                 className=" object-cover rounded-2xl md:w-44 lg:w-60  "
               />
