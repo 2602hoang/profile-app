@@ -16,20 +16,20 @@ export default function App() {
       <div className="fixed bg-[#121212] top-0 left-0 right-0 shadow-2xl z-50 ">
         <Header sectionName={sectionName} />
       </div>
-      <div className=" text-white  max-w-screen-xl mx-auto px-4 pt-24">
-        <div id="home" className=" min-h-screen   pb-3  md:h-screen ">
+      <div className=" text-white  max-w-screen-xl mx-auto px-4 ">
+        <div id="home" className=" min-h-screen   pb-3  md:h-screen pt-28">
           <Home />
         </div>
-        <div id="about" className="md:h-screen min-h-screen   ">
+        <div id="about" className="md:h-screen min-h-screen pt-28   ">
           <About />
         </div>
-        <div id="skill" className="md:h-screen min-h-screen">
+        <div id="skill" className="md:h-screen min-h-screen pt-28">
           <Skill />
         </div>
-        <div id="project" className="md:h-screen min-h-screen">
+        <div id="project" className="md:h-screen min-h-screen pt-28">
           <Project />
         </div>
-        <div id="contact" className="md:h-screen min-h-screen">
+        <div id="contact" className="md:h-screen min-h-screen pt-28">
           <Contact />
         </div>
       </div>
