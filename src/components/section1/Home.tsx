@@ -3,7 +3,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="flex items-center bg-[#333333] md:min-h-[80vh] rounded-2xl shadow-2xl shadow-[#f4f1f1] py-14  md:flex-row flex-col justify-between mx-auto  px-4 sm:px-6 lg:px-8 font-sans   ">
+    <div className="flex items-center bg-[#121212]  md:min-h-[80vh] rounded-2xl shadow-2xl shadow-[#f4f1f1] py-14  md:flex-row flex-col justify-between mx-auto  px-4 sm:px-6 lg:px-8 font-sans   ">
       <div className="motion-translate-x-in-[200%] motion-translate-y-in-[0%] ">
         <div className="text-center">
           <h1 className="text-4xl pt-4  font-bold text-white motion-preset-stretch motion-duration-700 ">
@@ -13,7 +13,7 @@ const Home = () => {
             👨🏻‍💻 My name is Hoang
           </h1>
         </div>
-        <div className="bg-[#121212] mt-5  text-white  p-5 h-auto  font-mono relative rounded-2xl shadow-yellow-200 shadow-2xl">
+        <div className=" mt-5  dark:bg-[#121212] text-white  p-5 h-auto  font-mono relative rounded-2xl shadow-yellow-200 shadow-2xl">
           <div className="shine">FRONT-END DEVELOPER</div>
           <div className="py-3 px-1">
             <svg
@@ -83,7 +83,7 @@ const Home = () => {
                   </g>
                 </svg>
                 My Profile
-                <p className="absolute  w-full opacity-0 -bottom-full rounded-md py-2 px-2 bg-black bg-opacity-70 left-1/2 -translate-x-1/2 group-hover:opacity-100 transition-opacity shadow-lg">
+                <p className="absolute  w-full opacity-0 -bottom-full rounded-md py-2 px-2 bg-[#3eade9] bg-opacity-70 left-1/2 -translate-x-1/2 group-hover:opacity-100 transition-opacity shadow-lg">
                   View & Download
                 </p>
               </button>
@@ -91,7 +91,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="macbook hover:cursor-zoom-in hover:motion-preset-pulse top-[50%] left-[50%] md:block hidden motion-translate-x-in-[0%] motion-translate-y-in-[200%]">
+      <div className="macbook hover:cursor-pointer hover:motion-preset-pulse top-[50%] left-[50%] md:block hidden motion-translate-x-in-[0%] motion-translate-y-in-[200%]">
         <div className="inner ">
           <div className="screen shadow-yellow-200 shadow-2xl">
             <div className="face-one">
@@ -199,7 +199,7 @@ const Home = () => {
         <div className="container0  md:w-[400px] w-64 pt-20 md:pt-0 h-auto ">
           <img src="./avaremovebg.png" className=" svg-icon  " alt="me" />
           <div className="container__star ">
-            <div className="star-eight md:size-64 md:before:size-64 size-32 before:size-32 bg-black before:bg-black "></div>
+            <div className="star-eight md:size-64 md:before:size-64 size-32 before:size-32 bg-[#2b323c] before:bg-[#2b323c] "></div>
           </div>
 
           <div></div>

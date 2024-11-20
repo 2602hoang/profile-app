@@ -6,7 +6,7 @@ import ContactMe from "./components/ContactMe";
 
 const Footter = () => {
   return (
-    <footer className="bg-[#121212] text-white border-2 overflow-hidden ">
+    <footer className="  border-2 overflow-hidden ">
       <div className="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row  lg:justify-between pt-5 items-center justify-center ">
           <div className="motion-translate-x-in-[-200%] motion-translate-y-in-[0%] motion-preset-flomoji-🚀">

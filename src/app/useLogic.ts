@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { headerData } from "@/components/header/data";
 import { useEffect, useState } from "react";
 
@@ -60,7 +61,7 @@ export const useLogic = () => {
       }
       if (!found) {
         setSectionName("");
-        window.history.pushState(null, "", "#");
+        window.history.pushState(null, "", `${sectionName}`);
       }
     };
     window.addEventListener("scroll", handleScroll);
