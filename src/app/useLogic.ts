@@ -61,7 +61,7 @@ export const useLogic = () => {
       }
       if (!found) {
         setSectionName("");
-        window.history.pushState(null, "", `${sectionName}`);
+        window.history.pushState(null, "", `#${sectionName}`);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -69,6 +69,6 @@ export const useLogic = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [sectionName]);
+  }, []);
   return { sectionName, scrollToTop };
 };

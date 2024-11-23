@@ -41,7 +41,7 @@ const Header: React.FC<Prop> = ({ sectionName, toggleTheme }) => {
                             sectionName.trim() === item.href,
                         }
                       )}
-                      href={`${item.href}`}
+                      href={`#${item.href}`}
                     >
                       {item.icon} {item.title}
                     </a>

@@ -117,7 +117,7 @@ const ContactMe = () => {
                 className={clsx(
                   "hover:motion-preset-confetti transition hover:text-gray-500/75 text-md text-gray-500 hover:text-teal-600 hover:font-bold hover:underline"
                 )}
-                href={`${item.href}`}
+                href={`#${item.href}`}
               >
                 {item.title}
               </a>

@@ -9,6 +9,7 @@ import React from "react";
 import { useLogic } from "./useLogic";
 import Footter from "@/components/footter/Footter";
 import { useTheme } from "next-themes";
+import ProgressBar from "@/components/progressBar/ProgressBar";
 
 export default function App() {
   const { sectionName, scrollToTop } = useLogic();
@@ -19,7 +20,8 @@ export default function App() {
   };
   return (
     <div className="min-h-screen w-full font-mono ">
-      <div className="fixed  top-0 left-0 right-0 bg-white dark:bg-transparent border-b shadow-2xl z-50 ">
+      <ProgressBar />
+      <div className="fixed  top-0 left-0 right-0 bg-white dark:bg-transparent border-b  shadow-2xl z-40  ">
         <Header toggleTheme={toggleTheme} sectionName={sectionName} />
       </div>
       <div className="   max-w-screen-xl mx-auto px-4 ">
@@ -39,7 +41,11 @@ export default function App() {
           <Contact />
         </div>
       </div>
-      <button id="backToTop" className="back-to-top" onClick={scrollToTop}>
+      <button
+        id="backToTop"
+        className="dark:bg-white dark:text-black bg-black text-white back-to-top"
+        onClick={scrollToTop}
+      >
         ↑
       </button>
       <Footter />
