@@ -1,15 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import React from "react";
-import clsx from "clsx";
-import { headerData } from "./data";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import React, { useState } from "react";
 import { ModeToggleTheme } from "./components/ModeToggle";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { MenuOutlined } from "@ant-design/icons";
+import { ItemMenu } from "./data";
 
 interface Prop {
   sectionName: string;
   toggleTheme: () => void;
 }
 const Header: React.FC<Prop> = ({ sectionName, toggleTheme }) => {
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const closeSheet = () => setIsSheetOpen(false);
   return (
     <header className="py-2  aniheader ">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -19,59 +23,38 @@ const Header: React.FC<Prop> = ({ sectionName, toggleTheme }) => {
               className="block text-teal-600 hover:motion-preset-flomoji-👍"
               href="/"
             >
-              <span className="sr-only">Home</span>
               <img
                 src="/me1.png"
                 alt="Profile picture"
-                className="size-16 object-cover rounded-full "
+                className="object-cover rounded-full size-16"
               />
             </a>
           </div>
 
           <div className="md:flex md:items-center md:gap-12">
             <nav aria-label="Global" className="hidden md:block">
-              <ul className="flex items-center gap-6 text-lg">
-                {headerData.map((item) => (
-                  <li key={item.key}>
-                    <a
-                      className={clsx(
-                        " transition hover:text-gray-500/75 text-gray-500 hover:motion-preset-confetti",
-                        {
-                          "text-teal-600 font-bold ":
-                            sectionName.trim() === item.href,
-                        }
-                      )}
-                      href={`#${item.href}`}
-                    >
-                      {item.icon} {item.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <ItemMenu sectionName={sectionName} />
             </nav>
 
             <div className="hidden md:relative md:block ">
               <ModeToggleTheme toggleTheme={toggleTheme} />
             </div>
 
-            <div className="block md:hidden">
-              <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="size-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
-            </div>
+            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+              <SheetTrigger>
+                <div className="block md:hidden">
+                  <MenuOutlined className="" />
+                </div>
+              </SheetTrigger>
+              <SheetContent className="w-full flex flex-col justify-center items-center">
+                <div onClick={closeSheet}>
+                  <ItemMenu sectionName={sectionName} />
+                </div>
+                <button onClick={closeSheet} className="">
+                  <ModeToggleTheme toggleTheme={toggleTheme} />
+                </button>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>

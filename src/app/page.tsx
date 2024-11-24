@@ -21,7 +21,7 @@ export default function App() {
   return (
     <div className="min-h-screen w-full font-mono ">
       <ProgressBar />
-      <div className="fixed  top-0 left-0 right-0 bg-white dark:bg-transparent border-b  shadow-2xl z-40  ">
+      <div className="fixed  top-0 left-0 right-0 bg-white dark:bg-black border-b  shadow-2xl z-40  ">
         <Header toggleTheme={toggleTheme} sectionName={sectionName} />
       </div>
       <div className="   max-w-screen-xl mx-auto px-4 ">

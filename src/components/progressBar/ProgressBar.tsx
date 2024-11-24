@@ -1,3 +1,4 @@
+"use client";
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 
@@ -27,10 +28,20 @@ const ProgressBar: React.FC = () => {
     };
   }, []);
 
+  const [mounted, setMounted] = useState<boolean>(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   const progressBarStyle: React.CSSProperties = {
-    height: windowWidth >= 768 ? "5px" : `${scrollPercent}%`,
+    height: windowWidth >= 768 ? "3px" : `${scrollPercent}%`,
     width: windowWidth >= 768 ? `${scrollPercent}%` : "4px",
-    backgroundColor: theme !== "dark" ? "#fff" : "#121212",
+    backgroundColor: theme === "dark" ? "#ffffcc" : "#ffffcc",
   };
 
   return (
