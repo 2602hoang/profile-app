@@ -13,7 +13,6 @@ import Footter from "../../components/footter/Footter";
 
 export default function App() {
   const { sectionName, scrollToTop, toggleTheme } = useLogic();
-
   return (
     <div className="min-h-screen w-full font-mono overflow-hidden ">
       <ProgressBar />
