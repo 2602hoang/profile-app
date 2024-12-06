@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { useLogic } from "./useLogic";
 import ProgressBar from "../../components/progressBar/ProgressBar";
