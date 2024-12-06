@@ -19,7 +19,6 @@ const ProgressBar: React.FC = () => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
     return () => {
