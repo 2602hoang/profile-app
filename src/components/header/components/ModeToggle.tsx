@@ -1,8 +1,8 @@
 "use client";
 import * as React from "react";
 import { useTheme } from "next-themes";
-import { MoonFilled, SunFilled } from "@ant-design/icons";
-interface Prop {
+import { MoonIcon, SunIcon } from "lucide-react";
+export interface Prop {
   toggleTheme: () => void;
 }
 export const ModeToggleTheme: React.FC<Prop> = ({ toggleTheme }) => {
@@ -19,9 +19,9 @@ export const ModeToggleTheme: React.FC<Prop> = ({ toggleTheme }) => {
           }}
         >
           {theme === "light" ? (
-            <SunFilled className="mr-2 h-4 w-4 text-yellow-600" />
+            <SunIcon className="mr-2 h-4 w-4 text-yellow-600" />
           ) : (
-            <MoonFilled className="mr-2 h-4 w-4 text-[#333333]" />
+            <MoonIcon className="mr-2 h-4 w-4 text-[#fff]" />
           )}
         </button>
       </div>

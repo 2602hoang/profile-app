@@ -1,19 +1,12 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { AboutComponent } from "./components/AboutComponent";
+import { data } from "./data";
 
 export const About = () => {
   return (
     <div className="flex bg-[#121212] gap-5  rounded-2xl shadow-2xl shadow-[#f4f1f1] md:flex-row  p-10 md:min-h-[80vh] flex-col items-start justify-between w-full max-w-screen-xl ">
-      <div className="w-full  ">
-        {/* <Avatar className="w-72 md:w-full h-auto hover:motion-preset-seesaw rounded-none "> */}
-        <img
-          src="/me1removebg1.png"
-          alt="me"
-          className="w-72 md:w-96   shadow-black h-auto object-cover bg-transparent  "
-        />
-      </div>
       <div className="w-full ">
-        <h1>About me</h1>
+        <AboutComponent data={data} />
       </div>
     </div>
   );

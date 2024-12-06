@@ -2,8 +2,7 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import LoadingPage from "@/components/loading/LoadingPage";
-
+import LoadingPage from "../components/loading/LoadingPage";
 export function ThemeProvider({
   children,
   ...props
@@ -15,7 +14,7 @@ export function ThemeProvider({
   }, []);
   if (!mounted) {
     return (
-      <div className=" h-screen w-screen flex justify-center items-center">
+      <div className="h-screen w-screen  flex justify-center items-center">
         <LoadingPage />
       </div>
     );

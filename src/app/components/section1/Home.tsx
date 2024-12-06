@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import Iteammac from "@/components/section1/components/Iteammac";
 import React from "react";
-import Iteammac from "./components/Iteammac";
 
 const Home = () => {
   return (
@@ -71,7 +71,7 @@ const Home = () => {
       <Iteammac />
       <div className="hover:motion-preset-flomoji-👍 hover:cursor-grabbing   motion-translate-x-in-[-200%] motion-translate-y-in-[0%] ">
         <div className="container0  md:w-[400px] w-64 pt-20 md:pt-0 h-auto ">
-          <img src="./me6.png" className=" svg-icon  " alt="me" />
+          <img src="./avaremovebg.png" className=" svg-icon  " alt="me" />
           <div className="container__star ">
             <div className="star-eight md:size-64 md:before:size-64 size-32 before:size-32 bg-[#2b323c] before:bg-[#2b323c] "></div>
           </div>

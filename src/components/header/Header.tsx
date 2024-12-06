@@ -1,11 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState } from "react";
 import { ModeToggleTheme } from "./components/ModeToggle";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { MenuOutlined } from "@ant-design/icons";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
+
 import { ItemMenu } from "./data";
+import { MenuIcon } from "lucide-react";
 
 interface Prop {
   sectionName: string;
@@ -18,9 +17,9 @@ const Header: React.FC<Prop> = ({ sectionName, toggleTheme }) => {
     <header className="py-2  aniheader ">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <div className="flex-1 md:flex md:items-center md:gap-12  ">
+          <div className="flex md:items-center md:gap-12 z-50 ">
             <a
-              className="block text-teal-600 hover:motion-preset-flomoji-👍"
+              className="text-teal-600 hover:motion-preset-flomoji-👍 cursor-pointer"
               href="/"
             >
               <img
@@ -38,23 +37,33 @@ const Header: React.FC<Prop> = ({ sectionName, toggleTheme }) => {
 
             <div className="hidden md:relative md:block ">
               <ModeToggleTheme toggleTheme={toggleTheme} />
+              {/* <ThemeSwitcherButton toggleTheme={toggleTheme} /> */}
             </div>
-
-            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-              <SheetTrigger>
-                <div className="block md:hidden">
-                  <MenuOutlined className="" />
-                </div>
-              </SheetTrigger>
-              <SheetContent className="w-full flex flex-col justify-center items-center">
-                <div onClick={closeSheet}>
-                  <ItemMenu sectionName={sectionName} />
-                </div>
-                <button onClick={closeSheet} className="">
-                  <ModeToggleTheme toggleTheme={toggleTheme} />
-                </button>
-              </SheetContent>
-            </Sheet>
+            <div className="md:hidden relative block ">
+              <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+                <SheetTrigger>
+                  <div className="block md:hidden">
+                    <MenuIcon aria-label="Open Menu" />
+                  </div>
+                </SheetTrigger>
+                <SheetTitle></SheetTitle>
+                <SheetContent
+                  aria-describedby={undefined}
+                  className="w-full flex flex-col justify-center items-center"
+                >
+                  <div onClick={closeSheet}>
+                    <ItemMenu
+                      aria-label="Open Menu"
+                      sectionName={sectionName}
+                    />
+                  </div>
+                  <div onClick={closeSheet}>
+                    <ModeToggleTheme toggleTheme={toggleTheme} />
+                    {/* <ThemeSwitcherButton toggleTheme={toggleTheme} /> */}
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
         </div>
       </div>

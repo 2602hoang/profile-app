@@ -40,7 +40,7 @@ const ProgressBar: React.FC = () => {
 
   const progressBarStyle: React.CSSProperties = {
     height: windowWidth >= 768 ? "3px" : `${scrollPercent}%`,
-    width: windowWidth >= 768 ? `${scrollPercent}%` : "4px",
+    width: windowWidth >= 768 ? `${scrollPercent}%` : "2px",
     backgroundColor: theme === "dark" ? "#ffffcc" : "#ffffcc",
   };
 

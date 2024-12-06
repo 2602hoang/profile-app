@@ -1,9 +1,14 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { headerData } from "@/components/header/data";
 import { useEffect, useState } from "react";
+import { headerData } from "../../components/header/data";
+import { useTheme } from "next-themes";
 
 export const useLogic = () => {
   const [sectionName, setSectionName] = useState<string>("");
+  const { theme, setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -38,6 +43,7 @@ export const useLogic = () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
+
   useEffect(() => {
     const sections = headerData.map((item) =>
       document.getElementById(item.href)
@@ -69,6 +75,6 @@ export const useLogic = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-  return { sectionName, scrollToTop };
+  }, [sectionName]);
+  return { sectionName, scrollToTop, toggleTheme };
 };

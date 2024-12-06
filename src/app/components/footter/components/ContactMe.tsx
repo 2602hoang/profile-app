@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import clsx from "clsx";
-import { headerData } from "@/components/header/data";
 
 import {
   Tooltip,
@@ -16,6 +15,7 @@ import {
   FaTiktok,
   FaYoutube,
 } from "react-icons/fa";
+import { headerData } from "@/components/header/data";
 
 type IconInfo = {
   Icon: ReactNode;

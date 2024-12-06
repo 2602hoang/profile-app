@@ -1,25 +1,21 @@
 "use client";
-import Header from "@/components/header/Header";
-import Home from "@/components/section1/Home";
-import { About } from "@/components/section2/About";
-import Skill from "@/components/section3/Skill";
-import Project from "@/components/section4/Project";
-import Contact from "@/components/section5/Contact";
+
 import React from "react";
 import { useLogic } from "./useLogic";
-import Footter from "@/components/footter/Footter";
-import { useTheme } from "next-themes";
-import ProgressBar from "@/components/progressBar/ProgressBar";
+import ProgressBar from "../../components/progressBar/ProgressBar";
+import Header from "../../components/header/Header";
+import { About } from "../../components/section2/About";
+import Skill from "../../components/section3/Skill";
+import Project from "../../components/section4/Project";
+import Contact from "../../components/section5/Contact";
+import Home from "../../components/section1/Home";
+import Footter from "../../components/footter/Footter";
 
 export default function App() {
-  const { sectionName, scrollToTop } = useLogic();
-  const { theme, setTheme } = useTheme();
+  const { sectionName, scrollToTop, toggleTheme } = useLogic();
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
   return (
-    <div className="min-h-screen w-full font-mono ">
+    <div className="min-h-screen w-full font-mono overflow-hidden ">
       <ProgressBar />
       <div className="fixed  top-0 left-0 right-0 bg-white dark:bg-black border-b  shadow-2xl z-40  ">
         <Header toggleTheme={toggleTheme} sectionName={sectionName} />

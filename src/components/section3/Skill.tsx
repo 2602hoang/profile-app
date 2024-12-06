@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { skillsCode, softSkills } from "./data";
+import { CarouselCylindricalVariant1 } from "./components/CarouselSkills";
 
 const Skill = () => {
   return (
@@ -10,44 +11,28 @@ const Skill = () => {
           SKILLS ABOUT ME
         </h1>
         <h3 className="text-xl text-white">Programming Skills</h3>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 md:px-28 items-center justify-center">
+          <CarouselCylindricalVariant1 listItem={skillsCode} />
           {skillsCode.map((skill, index) => (
             <div
               style={{ backgroundColor: skill.color }}
               key={index}
-              className="flex p-3 rounded-3xl items-center gap-2  text-white"
+              className="grid  place-items-center p-3 rounded-3xl  text-center gap-2  min-w-32 text-white"
             >
-              <p className="flex items-center gap-2 min-w-32">
-                <span
-                  style={{ backgroundColor: skill.color }}
-                  className="p-2 rounded-full border border-white  text-white"
-                >
-                  {skill.icon}
-                </span>
-                {skill.name}
-              </p>
+              {skill.name1}
             </div>
           ))}
         </div>
         <h3 className="text-xl text-white mt-5">Soft Skills</h3>
-        <div className="flex flex-wrap gap-4">
-          {softSkills.map((skill, index) => (
+        <div className="flex flex-wrap gap-4 md:px-28 items-center justify-center">
+          <CarouselCylindricalVariant1 listItem={softSkills} />
+          {/* {softSkills.map((skill, index) => (
             <div
               style={{ backgroundColor: skill.color }}
               key={index}
-              className="flex  p-3 rounded-3xl items-center gap-2 text-white"
-            >
-              <span
-                style={{ backgroundColor: skill.color }}
-                className="p-2 rounded-full text-white"
-              >
-                {skill.icon}
-              </span>
-              <p>
-                {skill.name} {"//"}
-              </p>
-            </div>
-          ))}
+              className="grid  place-items-center p-3 rounded-3xl  text-center gap-2  text-white"
+            ></div>
+          ))} */}
         </div>
       </div>
     </div>
