@@ -1,4 +1,11 @@
-export const ItemProject = [
+export interface ItemProject {
+  key: number;
+  title: string;
+  description: string;
+  image: string;
+}
+
+export const ItemProject: ItemProject[] = [
   {
     key: 1,
     title: "Project 1",

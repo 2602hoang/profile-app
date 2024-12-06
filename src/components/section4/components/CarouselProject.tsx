@@ -7,10 +7,13 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import * as React from "react";
-interface Prop {
-  listItems: any[];
-}
-export const CarouselProject = ({ listItems }: Prop) => {
+import { ItemProject } from "../data";
+
+export const CarouselProject = ({
+  listItems: listItems,
+}: {
+  listItems: ItemProject[];
+}) => {
   return (
     <Carousel className="bg-white px-8 w-full">
       <CarouselContent>
