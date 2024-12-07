@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
+import { TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Tooltip, TooltipProvider } from "@radix-ui/react-tooltip";
 import clsx from "clsx";
 import {
   type PanInfo,
@@ -109,16 +111,32 @@ export const CarouselCylindricalVariant1 = ({ listItem }: Prop) => {
                     minWidth: item.name ? "200px" : undefined,
                   }}
                 >
-                  <div
-                    style={{ backgroundColor: item.color }}
-                    className="flex flex-col p-2 rounded-3xl items-center gap-2 text-white"
-                  >
-                    <div className="size-9 rounded-full flex justify-center items-center ">
-                      {" "}
-                      {item.icon}
-                    </div>
-                    {item.name && <div className="text-sm">{item.name}</div>}
-                  </div>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <div
+                          style={{ backgroundColor: item.color }}
+                          className="flex flex-col p-2 rounded-3xl items-center gap-2 text-white"
+                        >
+                          <div className="size-9 rounded-full flex justify-center items-center ">
+                            {item.icon}
+                          </div>
+
+                          {item.name && (
+                            <div className="text-sm">{item.name}</div>
+                          )}
+                        </div>
+                      </TooltipTrigger>
+                      {item.name1 && (
+                        <TooltipContent
+                          side="bottom"
+                          className="bg-white text-black p-2 rounded-md shadow-md"
+                        >
+                          <p>{item.name1}</p>
+                        </TooltipContent>
+                      )}
+                    </Tooltip>
+                  </TooltipProvider>
                 </div>
               </div>
             );

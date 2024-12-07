@@ -17,10 +17,10 @@ export default function LoadingPage() {
           }
         `}
       </style>
-      <div className="grid grid-cols-3 gap-4 place-content-center place-items-center h-screen">
+      <div className="grid grid-cols-3 gap-4 place-content-center  place-items-center ">
         {[...new Array(9)].map((_, index) => (
           <div
-            className="size-5 origin-center rounded-xl bg-neutral-800 dark:invert"
+            className="size-5 origin-center rounded-xl bg-orange-500 dark:invert"
             key={index.toString()}
             style={{
               animationName: "three-dot-loader-growing",
