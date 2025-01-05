@@ -16,7 +16,7 @@ export const TextComponent = ({
   return (
     <div
       className={cn(
-        "transform-gpu rounded-lg border transition-all",
+        "transform-gpu rounded-lg border transition-all overflow-hidden text-md",
         isOpen
           ? "border-neutral-500/10 bg-violet-600/10 bg-gradient-to-b from-neutral-200/15 to-neutral-200/5 dark:border-neutral-500/15 dark:from-neutral-600/15 dark:to-neutral-600/5 dark:shadow-[2px_4px_25px_0px_rgba(248,248,248,0.06)_inset] "
           : "scale-90 border-transparent opacity-50 saturate-0 "
@@ -44,7 +44,7 @@ export const TextComponent = ({
           isOpen ? " max-h-64" : "max-h-0"
         )}
       >
-        <p className="p-4 text-lg">{content}</p>
+        <p className="p-4 text-lg text-yellow-200">{content}</p>
         <div className="w-full px-4 pb-4">
           <div className="relative h-1 w-full overflow-hidden rounded-full">
             <div

@@ -127,12 +127,12 @@ export const CarouselCylindricalVariant1 = ({ listItem }: Prop) => {
                           )}
                         </div>
                       </TooltipTrigger>
-                      {item.name1 && (
+                      {item.title && (
                         <TooltipContent
                           side="bottom"
                           className="bg-white text-black p-2 rounded-md shadow-md"
                         >
-                          <p>{item.name1}</p>
+                          <p>{item.title}</p>
                         </TooltipContent>
                       )}
                     </Tooltip>

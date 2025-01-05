@@ -22,55 +22,136 @@ import {
   SiReactquery,
   SiShadcnui,
 } from "react-icons/si";
-export const skillsCode: {
-  name1: string;
-  color: string;
+
+interface Skill {
+  title: string;
+  href: string;
   icon: React.ReactNode;
-}[] = [
-  { name1: "HTML", color: "#E34F26", icon: <FaHtml5 /> },
-  { name1: "CSS/SCSS", color: "#264DE4", icon: <FaCss3Alt /> },
-  { name1: "JavaScript", color: "#F7DF1E", icon: <FaJsSquare /> },
-  { name1: "TypeScript", color: "#007ACC", icon: <SiTypescript /> },
-  { name1: "NextJS", color: "#000000", icon: <SiNextdotjs /> },
+  color: string;
+  description: string;
+}
+export const skillsData: Skill[] = [
   {
-    name1: "ReactJS",
-    color: "#61DBFB",
-    icon: (
-      <p className="flex flex-col   items-center gap-2">
-        <FaReact />
-        <span className="text-[6px]"> ReactJS</span>
-      </p>
-    ),
+    title: "HTML",
+    color: "#E34F26",
+    icon: <FaHtml5 />,
+    href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    description: "The standard markup language for creating web pages",
   },
   {
-    name1: "React Query",
-    color: "#61DBFB",
-    icon: (
-      <p className="flex flex-col  items-center gap-2">
-        <SiReactquery />
-        <span className="text-[6px]"> ReactQuery</span>
-      </p>
-    ),
+    title: "CSS/SCSS",
+    color: "#264DE4",
+    icon: <FaCss3Alt />,
+    href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    description:
+      "Style sheet language used for describing the presentation of a document",
   },
   {
-    name1: "ReactNative",
-    color: "#61DBFB",
-    icon: (
-      <p className="flex flex-col   items-center gap-2">
-        <FaReact />
-        <span className="text-[6px]"> ReactNative</span>
-      </p>
-    ),
+    title: "JavaScript",
+    color: "#F7DF1E",
+    icon: <FaJsSquare />,
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    description: "High-level, interpreted programming language",
   },
-  { name1: "TailwindCSS", color: "#38B2AC", icon: <SiTailwindcss /> },
-  { name1: "NodeJS", color: "#68A063", icon: <FaNodeJs /> },
-  { name1: "Express", color: "#000000", icon: <SiExpress /> },
-  { name1: "MongoDB", color: "#4DB33D", icon: <SiMongodb /> },
-  { name1: "MySQL", color: "#00758F", icon: <SiMysql /> },
-  { name1: "Git", color: "#F05032", icon: <FaGitAlt /> },
-  { name1: "Vercel", color: "#000000", icon: <SiVercel /> },
-  { name1: "AntDesign", color: "#0170FE", icon: <SiAntdesign /> },
-  { name1: "Shadcn/ui", color: "#000000", icon: <SiShadcnui /> },
+  {
+    title: "TypeScript",
+    color: "#007ACC",
+    icon: <SiTypescript />,
+    href: "https://www.typescriptlang.org/",
+    description:
+      "Typed superset of JavaScript that compiles to plain JavaScript",
+  },
+  {
+    title: "NextJS",
+    color: "#000000",
+    icon: <SiNextdotjs />,
+    href: "https://nextjs.org/",
+    description: "React framework for production-grade applications",
+  },
+  {
+    title: "ReactJS",
+    color: "#61DBFB",
+    icon: <FaReact />,
+    href: "https://react.dev/",
+    description: "JavaScript library for building user interfaces",
+  },
+  {
+    title: "React Query",
+    color: "#61DBFB",
+    icon: <SiReactquery />,
+    href: "https://tanstack.com/query/v4/",
+    description: "Powerful asynchronous state management for React",
+  },
+  {
+    title: "ReactNative",
+    color: "#61DBFB",
+    icon: <FaReact />,
+    href: "https://reactnative.dev/",
+    description: "Framework for building native apps using React",
+  },
+  {
+    title: "TailwindCSS",
+    color: "#38B2AC",
+    icon: <SiTailwindcss />,
+    href: "https://tailwindcss.com/docs/installation",
+    description: "Utility-first CSS framework for rapid UI development",
+  },
+  {
+    title: "NodeJS",
+    color: "#68A063",
+    icon: <FaNodeJs />,
+    href: "https://nodejs.org/docs/latest/api/",
+    description: "JavaScript runtime built on Chrome's V8 JavaScript engine",
+  },
+  {
+    title: "Express",
+    color: "#000000",
+    icon: <SiExpress />,
+    href: "https://expressjs.com/en/starter/installing.html",
+    description: "Fast, unopinionated, minimalist web framework for Node.js",
+  },
+  {
+    title: "MongoDB",
+    color: "#4DB33D",
+    icon: <SiMongodb />,
+    href: "https://www.mongodb.com/docs/manual/core/document/",
+    description: "Document-oriented NoSQL database",
+  },
+  {
+    title: "MySQL",
+    color: "#00758F",
+    icon: <SiMysql />,
+    href: "https://dev.mysql.com/doc/",
+    description: "Open-source relational database management system",
+  },
+  {
+    title: "Git",
+    color: "#F05032",
+    icon: <FaGitAlt />,
+    href: "https://git-scm.com/doc",
+    description: "Distributed version control system",
+  },
+  {
+    title: "Vercel",
+    color: "#000000",
+    icon: <SiVercel />,
+    href: "https://vercel.com/guides/does-vercel-support-docker-deployments",
+    description: "Cloud platform for static sites and Serverless Functions",
+  },
+  {
+    title: "AntDesign",
+    color: "#0170FE",
+    icon: <SiAntdesign />,
+    href: "https://ant.design/docs/react/getting-started",
+    description: "A design system for enterprise-level products",
+  },
+  {
+    title: "Shadcn/ui",
+    color: "#000000",
+    icon: <SiShadcnui />,
+    href: "https://ui.shadcn.com/docs",
+    description: "Re-usable components built using Radix UI and Tailwind CSS",
+  },
 ];
 
 export const softSkills: {

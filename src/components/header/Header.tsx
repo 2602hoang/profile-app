@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 
 import { ItemMenu } from "./data";
 import { MenuIcon } from "lucide-react";
+import Image from "next/image";
 
 interface Prop {
   sectionName: string;
@@ -22,10 +23,12 @@ const Header: React.FC<Prop> = ({ sectionName, toggleTheme }) => {
               className="text-teal-600 hover:motion-preset-flomoji-👍 cursor-pointer"
               href="/"
             >
-              <img
+              <Image
                 src="/me1.png"
                 alt="Profile picture"
-                className="object-cover rounded-full size-16"
+                className="object-cover rounded-full"
+                height={64}
+                width={64}
               />
             </a>
           </div>
@@ -37,7 +40,6 @@ const Header: React.FC<Prop> = ({ sectionName, toggleTheme }) => {
 
             <div className="hidden md:relative md:block ">
               <ModeToggleTheme toggleTheme={toggleTheme} />
-              {/* <ThemeSwitcherButton toggleTheme={toggleTheme} /> */}
             </div>
             <div className="md:hidden relative block ">
               <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>

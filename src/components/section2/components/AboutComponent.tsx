@@ -73,7 +73,7 @@ export const AboutComponent = ({ data: data }: { data: any[] }) => {
               <img
                 alt={item.title}
                 className={cn(
-                  "absolute h-auto w-full rounded-lg object-cover transform-gpu  transition-all duration-300",
+                  "absolute w-full h-96 md:h-full rounded-lg object-cover transform-gpu  transition-all duration-300 overflow-hidden",
                   featureOpen === index ? "scale-100" : "scale-70",
                   featureOpen > index ? "translate-y-full" : ""
                 )}

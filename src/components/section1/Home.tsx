@@ -1,20 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Iteammac from "./components/Iteammac";
 
 const Home = () => {
   return (
-    <div className="flex items-center bg-[#121212]   md:min-h-[80vh] rounded-2xl shadow-2xl shadow-[#f4f1f1] py-14  md:flex-row flex-col justify-between mx-auto  px-4 sm:px-6 lg:px-8 font-sans   ">
+    <div className="sectionLayout ">
       <div className="motion-translate-x-in-[200%] motion-translate-y-in-[0%] ">
         <div className="text-center">
-          <h1 className="text-4xl pt-4  font-bold text-white motion-preset-stretch motion-duration-700 ">
+          <h1 className="text-4xl pt-4  font-bold  motion-preset-stretch motion-duration-700 ">
             HI THERE ✌️
           </h1>
           <h1 className="text-yellow-300 text-xl md:text-4xl  motion-preset-stretch  ">
             👨🏻‍💻 My name is Hoang
           </h1>
         </div>
-        <div className=" mt-5  dark:bg-[#121212] text-white  p-5 h-auto  font-mono relative rounded-2xl shadow-yellow-200 shadow-2xl">
+        <div className=" mt-5  dark:bg-[#121212]   p-5 h-auto  font-mono relative rounded-2xl shadow-yellow-200 shadow-2xl">
           <div className="shine">FRONT-END DEVELOPER</div>
           <div className="text-sm py-2 font-mono ">
             <div className=" font-bold max-w-2xl ">
@@ -68,10 +67,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Iteammac />
+
       <div className="hover:motion-preset-flomoji-👍 hover:cursor-grabbing   motion-translate-x-in-[-200%] motion-translate-y-in-[0%] ">
         <div className="container0  md:w-[400px] w-64 pt-20 md:pt-0 h-auto ">
-          <img src="./me6.png" className=" svg-icon  " alt="me" />
+          <img src="./me6.png" className="svg-icon object-cover" alt="me" />
           <div className="container__star ">
             <div className="star-eight md:size-64 md:before:size-64 size-32 before:size-32 bg-[#2b323c] before:bg-[#2b323c] "></div>
           </div>

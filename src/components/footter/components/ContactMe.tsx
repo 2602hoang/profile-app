@@ -93,7 +93,7 @@ const ContactMe = () => {
           Phone: +84 917.789.964
         </a>
         <p>Email: vuhuyhoangboj@gmail.com</p>
-        <p className="pb-10">Address: Viet Nam</p>
+        <p className="pb-10">Address: Viet Nam 🇻🇳</p>
         <h3 className="pb-5 font-black uppercase">🌏 My Social Networks</h3>
       </div>
       <div className="flex gap-x-5 text-4xl pb-10">

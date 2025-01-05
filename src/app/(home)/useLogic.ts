@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { headerData } from "../../components/header/data";
 import { useTheme } from "next-themes";
-
 export const useLogic = () => {
   const [sectionName, setSectionName] = useState<string>("");
   const { theme, setTheme } = useTheme();
-
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
@@ -15,7 +13,6 @@ export const useLogic = () => {
       behavior: "smooth",
     });
   };
-
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === "ArrowRight") {
       scrollToTop();
@@ -42,8 +39,8 @@ export const useLogic = () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("keydown", handleKeyDown);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   useEffect(() => {
     const sections = headerData.map((item) =>
       document.getElementById(item.href)
@@ -66,8 +63,10 @@ export const useLogic = () => {
         }
       }
       if (!found) {
-        setSectionName("");
-        window.history.pushState(null, "", `#${sectionName}`);
+        if (sectionName !== "") {
+          setSectionName("");
+          window.history.pushState(null, "", "#");
+        }
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -76,5 +75,6 @@ export const useLogic = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [sectionName]);
+
   return { sectionName, scrollToTop, toggleTheme };
 };
