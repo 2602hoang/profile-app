@@ -8,7 +8,6 @@ import {
   MotionValue,
 } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 export const HeroParallax = ({
   products,
@@ -108,9 +107,11 @@ export const Header = () => {
         WellCome to <br /> My Portfolio
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+        My name is Vu Huy Hoang, I am a Software Engineer. I also have basic
+        experience with frameworks like ReactJS, React Native, NextJS and
+        NodeJS. Additionally, I am familiar with using Git for source code
+        management and have experience with development tools like VSCode. My
+        goal is to become a Tech Lead.
       </p>
     </div>
   );
@@ -136,20 +137,17 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className="group/product max-w-96 w-full h-72 relative flex-shrink-0 px-28"
     >
-      <Link
-        href={product.link}
-        className="block group-hover/product:shadow-2xl "
-      >
+      <div className="block group-hover/product:shadow-2xl ">
         <Image
           src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
+          height="400"
+          width="400"
+          className="object-cover object-left-top absolute max-w-96 w-full h-72 inset-0"
           alt={product.title}
         />
-      </Link>
+      </div>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}

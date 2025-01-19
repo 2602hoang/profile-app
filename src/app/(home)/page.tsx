@@ -50,11 +50,12 @@ export default function App() {
         <div data-aos="zoom-in-down" className=" h-fit ">
           <HeroPage />
         </div>
-        <div className="max-w-screen-xl mx-auto px-4 relative">
+
+        <div className="md:mx-auto max-w-screen-xl w-full px-4 md:px-0 relative">
           <div
-            data-aos="zoom-in-down"
+            // data-aos="zoom-in-down"
             id="home"
-            className="  md:h-screen pt-28 "
+            className="  md:h-screen h-auto pt-28   "
           >
             <Home />
           </div>
@@ -76,6 +77,9 @@ export default function App() {
           id="project"
           className="md:h-screen pt-28 pb-3 overflow-hidden"
         >
+          <h1 className="text-4xl font-bold text-center text-white z-50">
+            PROJECTS OF ME
+          </h1>
           <Project />
         </div>
         <div

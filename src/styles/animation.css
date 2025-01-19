@@ -5,5 +5,5 @@
   @apply motion-scale-in-[0.5] motion-translate-x-in-[0%] motion-translate-y-in-[-81%] motion-blur-in-[10px] motion-duration-[1.13s]/translate motion-delay-[0.75s]/blur;
 }
 .sectionLayout {
-  @apply flex items-center   md:min-h-[80vh] rounded-2xl shadow-2xl shadow-[#f4f1f1] py-14  md:flex-row flex-col justify-between mx-auto  px-4 sm:px-6 lg:px-8 font-sans;
+  @apply grid place-items-center place-content-center md:min-h-fit w-full h-auto rounded-2xl shadow-2xl shadow-[#f4f1f1] py-14  px-4 sm:px-6 lg:px-8  justify-between mx-auto  font-sans;
 }

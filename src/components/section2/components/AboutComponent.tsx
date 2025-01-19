@@ -66,14 +66,14 @@ export const AboutComponent = ({ data: data }: { data: any[] }) => {
         <div className="h-full">
           <div
             className={cn(
-              "relative h-96 w-full overflow-hidden rounded-lg md:h-[500px]"
+              "relative h-[500px] md:h-full w-full overflow-hidden rounded-lg "
             )}
           >
             {data.map((item, index) => (
               <img
                 alt={item.title}
                 className={cn(
-                  "absolute w-full h-96 md:h-full rounded-lg object-cover transform-gpu  transition-all duration-300 overflow-hidden",
+                  "absolute   rounded-lg object-cover transform-gpu h-auto  transition-all duration-300 overflow-hidden",
                   featureOpen === index ? "scale-100" : "scale-70",
                   featureOpen > index ? "translate-y-full" : ""
                 )}

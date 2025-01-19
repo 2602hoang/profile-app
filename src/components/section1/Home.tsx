@@ -1,9 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
 
 const Home = () => {
   return (
-    <div className="sectionLayout ">
+    <div className="grid grid-cols-1 md:grid-cols-2 h-auto place-items-center py-32  px-4 sm:px-6 lg:px-8   rounded-2xl shadow-2xl shadow-[#f4f1f1] ">
       <div className="motion-translate-x-in-[200%] motion-translate-y-in-[0%] ">
         <div className="text-center">
           <h1 className="text-4xl pt-4  font-bold  motion-preset-stretch motion-duration-700 ">
@@ -68,9 +69,15 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="hover:motion-preset-flomoji-👍 hover:cursor-grabbing   motion-translate-x-in-[-200%] motion-translate-y-in-[0%] ">
-        <div className="container0  md:w-[400px] w-64 pt-20 md:pt-0 h-auto ">
-          <img src="./me6.png" className="svg-icon object-cover" alt="me" />
+      <div className="hover:motion-preset-flomoji-👍 hover:cursor-grabbing mt-10 md:mt-0  motion-translate-x-in-[-200%] motion-translate-y-in-[0%] ">
+        <div className="container0  md:max-w-[400px] w-64 pt-20 md:pt-0 h-auto ">
+          <Image
+            src="/me9.png"
+            className="svg-icon object-cover max-w-52 max-h-max rounded-lg"
+            alt="me"
+            width={400}
+            height={400}
+          />
           <div className="container__star ">
             <div className="star-eight md:size-64 md:before:size-64 size-32 before:size-32 bg-[#2b323c] before:bg-[#2b323c] "></div>
           </div>
